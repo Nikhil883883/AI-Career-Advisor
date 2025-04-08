@@ -1,0 +1,158 @@
+/* Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f8f9fa;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/ai-background.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.layout-header {
+  background: rgba(5, 5, 5, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 3.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Changed to center vertically */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Pushes nav to the right */
+}
+
+.layout-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 130px;
+  height: auto;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.layout-logo:hover {
+  transform: scale(1.05);
+}
+
+.layout-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff5f5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+.layout-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.layout-footer {
+  background: rgba(7, 7, 7, 0.95);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #e6dddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row; /* Changed from column to maintain horizontal layout */
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-link {
+    margin-right: 0;
+    width: 100%;
+    justify-content: left;
+    margin-bottom: 1rem;
+  }
+
+  .layout-nav {
+    width: 100%;
+  }
+
+  .layout-nav ul {
+    margin-top: 0;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .layout-main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-nav ul {
+    flex-direction: row; /* Changed from column to keep horizontal */
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+  
+  .layout-logo {
+    height: 50px; /* Slightly smaller on mobile */
+  }
+}

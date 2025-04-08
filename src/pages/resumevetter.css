@@ -1,0 +1,72 @@
+.resume-vetter {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .upload-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .pdf-upload button {
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .score-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .score-bar {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .score-bar div {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 5px;
+  }
+  
+  .missing-skills-list {
+    columns: 2;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Add more styles as needed *//* Mobile responsiveness */
+@media (max-width: 768px) {
+    .upload-options {
+      flex-direction: column;
+    }
+    
+    .missing-skills-list {
+      columns: 1;
+    }
+  }
+  
+  /* Animation for loading */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
